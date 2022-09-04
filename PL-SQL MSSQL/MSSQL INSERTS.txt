@@ -1,0 +1,161 @@
+INSERT INTO Dzialy (IDDzial, NazDz) VALUES ('AAAAAAAAAA','Little Willies Newspaper');
+INSERT INTO Dzialy (IDDzial, NazDz) VALUES ('BBBBBBBBBB','Johnson Car Catalog');
+
+
+INSERT INTO Firma (Nazwa, Miasto) VALUES ('Boston Brothers Company','Boston City');
+
+
+
+
+INSERT INTO Pracowniki (IDEmp, Stanowisko, Imie, Nazwisko, Sex, Salary, Dzialy_IDDzial, Firma_Nazwa)
+                              VALUES ('FIRMEMPL01','MANAGER','JOHN','BROWN','M',3200, 'AAAAAAAAAA','Boston Brothers Company');
+
+INSERT INTO Pracowniki (IDEmp, Stanowisko, Imie, Nazwisko, Sex, Salary, Dzialy_IDDzial, Firma_Nazwa)
+                              VALUES ('FIRMEMPL02','SELLER','BARRY','LADE','M',5000,'BBBBBBBBBB','Boston Brothers Company');
+
+INSERT INTO Pracowniki (IDEmp, Stanowisko, Imie, Nazwisko, Sex, Salary, Dzialy_IDDzial, Firma_Nazwa)
+                              VALUES ('FIRMEMPL03','WRITER','BOJACK','SIZLACK','M',3000,'AAAAAAAAAA','Boston Brothers Company');
+
+INSERT INTO Pracowniki (IDEmp, Stanowisko, Imie, Nazwisko, Sex, Salary, Dzialy_IDDzial, Firma_Nazwa)
+                              VALUES ('FIRMEMPL04','WRITER','AMANDA','BLOP','W',3000,'AAAAAAAAAA','Boston Brothers Company');
+
+INSERT INTO Pracowniki (IDEmp, Stanowisko, Imie, Nazwisko, Sex, Salary, Dzialy_IDDzial, Firma_Nazwa)
+                              VALUES ('FIRMEMPL05','SELLER','SARHA','GARSIA','W',4000,'BBBBBBBBBB','Boston Brothers Company');
+
+INSERT INTO Pracowniki (IDEmp, Stanowisko, Imie, Nazwisko, Sex, Salary, Dzialy_IDDzial, Firma_Nazwa)
+                              VALUES ('FIRMEMPL06','ACCOUNTENT','SAMUEL','JACKSON','M',2000,'BBBBBBBBBB','Boston Brothers Company');
+
+INSERT INTO Pracowniki (IDEmp, Stanowisko, Imie, Nazwisko, Sex, Salary, Dzialy_IDDzial, Firma_Nazwa)
+                              VALUES ('FIRMEMPL07','CHIEF','WILLIAM','BRIDGE','M',4900,'AAAAAAAAAA','Boston Brothers Company');
+
+INSERT INTO Pracowniki (IDEmp, Stanowisko, Imie, Nazwisko, Sex, Salary, Dzialy_IDDzial, Firma_Nazwa)
+                              VALUES ('FIRMEMPL08','SECRETARY','BARBARRA','DUNHILL','M',2600,'AAAAAAAAAA','Boston Brothers Company');
+
+INSERT INTO Pracowniki (IDEmp, Stanowisko, Imie, Nazwisko, Sex, Salary, Dzialy_IDDzial, Firma_Nazwa)
+                              VALUES ('FIRMEMPL09','WRITER','JOSEF','JOESTAR','M',1000,'AAAAAAAAAA','Boston Brothers Company');
+
+INSERT INTO Pracowniki (IDEmp, Stanowisko, Imie, Nazwisko, Sex, Salary, Dzialy_IDDzial, Firma_Nazwa)
+                              VALUES ('FIRMEMPL10','CHIEF','JOHN','BRIDGE','M',4700,'BBBBBBBBBB','Boston Brothers Company');
+
+
+
+
+
+INSERT INTO Katalog (ID_katalogu, czas_wydania_katalog, Dzialy_IDDzial)
+                                   VALUES ('KATSERIN01', '2011/10/10','BBBBBBBBBB');
+INSERT INTO Katalog (ID_katalogu, czas_wydania_katalog, Dzialy_IDDzial)
+                                   VALUES ('KATSERIN02', '2011/11/10','BBBBBBBBBB');
+INSERT INTO Katalog (ID_katalogu, czas_wydania_katalog, Dzialy_IDDzial)
+                                   VALUES ('KATSERIN03', '2012/12/10','BBBBBBBBBB');
+INSERT INTO Katalog (ID_katalogu, czas_wydania_katalog, Dzialy_IDDzial)
+                                   VALUES ('KATSERIN04', '2012/03/10','BBBBBBBBBB');
+INSERT INTO Katalog (ID_katalogu, czas_wydania_katalog, Dzialy_IDDzial)
+                                   VALUES ('KATSERIN05', '2012/05/10','BBBBBBBBBB');
+INSERT INTO Katalog (ID_katalogu, czas_wydania_katalog, Dzialy_IDDzial)
+                                   VALUES ('KATSERIN06', '2012/07/10','BBBBBBBBBB');
+INSERT INTO Katalog (ID_katalogu, czas_wydania_katalog, Dzialy_IDDzial)
+                                   VALUES ('KATSERIN07', '2012/09/10','BBBBBBBBBB');
+INSERT INTO Katalog (ID_katalogu, czas_wydania_katalog, Dzialy_IDDzial)
+                                   VALUES ('KATSERIN08', '2012/12/10','BBBBBBBBBB');
+INSERT INTO Katalog (ID_katalogu, czas_wydania_katalog, Dzialy_IDDzial)
+                                   VALUES ('KATSERIN09', '2013/03/10','BBBBBBBBBB');
+INSERT INTO Katalog (ID_katalogu, czas_wydania_katalog, Dzialy_IDDzial)
+                                   VALUES ('KATSERIN10', '2013/06/10','BBBBBBBBBB');
+INSERT INTO Katalog (ID_katalogu, czas_wydania_katalog, Dzialy_IDDzial)
+                                   VALUES ('KATSERIN11', '2013/10/10','BBBBBBBBBB');
+INSERT INTO Katalog (ID_katalogu, czas_wydania_katalog, Dzialy_IDDzial)
+                                   VALUES ('KATSERIN12', '2013/12/10','BBBBBBBBBB');
+
+
+
+INSERT INTO Sprzedawca (ID_sprzed, Imie, Nazwisko, PESEL) VALUES ('OWNSALCR01', 'BACKIE','BARNS',123213);
+INSERT INTO Sprzedawca (ID_sprzed, Imie, Nazwisko, PESEL) VALUES ('OWNSALCR02', 'RAMI','MALEK',232331);
+INSERT INTO Sprzedawca (ID_sprzed, Imie, Nazwisko, PESEL) VALUES ('OWNSALCR03', 'BILLY','JEANS',543265);
+INSERT INTO Sprzedawca (ID_sprzed, Imie, Nazwisko, PESEL) VALUES ('OWNSALCR04', 'OSKAR','SOPBASHER',562321);
+
+
+
+INSERT INTO Samochod (VIN_number, Sprzedawca_ID_sprzed, Brand,  Kolor, Model, rok_produkcji, IOWD, Liczba_wlascicelej)
+                                                      VALUES ('ABd1232FRS','OWNSALCR01', 'BMW', 'Black','570i','2002/07/10','Front Wheel Drive',3);
+
+
+INSERT INTO Samochod (VIN_number, Sprzedawca_ID_sprzed, Brand,  Kolor, Model, rok_produkcji, IOWD, Liczba_wlascicelej)
+                                                      VALUES ('ABd1233FRS', 'OWNSALCR01', 'M-B', 'White','C63','2013/11/05','Front Wheel Drive',7);
+
+
+INSERT INTO Samochod (VIN_number, Sprzedawca_ID_sprzed, Brand,  Kolor, Model, rok_produkcji, IOWD, Liczba_wlascicelej)
+                                                      VALUES ('ABd1234FRS', 'OWNSALCR03', 'AUDI','Mate Black','R8','2020/04/12','Rear Wheel Drive',1);
+
+
+INSERT INTO Samochod (VIN_number, Sprzedawca_ID_sprzed, Brand,  Kolor, Model, rok_produkcji, IOWD, Liczba_wlascicelej)
+                                                      VALUES ('ABd1235FRS', 'OWNSALCR02', 'McLaren', 'Yellow','P1','2018/07/15','Rear Wheel Drive',2);
+
+
+INSERT INTO Samochod (VIN_number, Sprzedawca_ID_sprzed, Brand,  Kolor, Model, rok_produkcji, IOWD, Liczba_wlascicelej)
+                                                      VALUES ('ABd1236FRS', 'OWNSALCR01', 'BMW', 'Dark Blue','M1','1991/07/06','Rear Wheel Drive',3);
+
+
+INSERT INTO Samochod (VIN_number, Sprzedawca_ID_sprzed, Brand,  Kolor, Model, rok_produkcji, IOWD, Liczba_wlascicelej)
+                                                      VALUES ('ABd1237FRS', 'OWNSALCR02', 'M-B', 'Gray','W140','1990/01/21','Front Wheel Drive',11);
+
+
+INSERT INTO Samochod (VIN_number, Sprzedawca_ID_sprzed, Brand,  Kolor, Model, rok_produkcji, IOWD, Liczba_wlascicelej)
+                                                      VALUES ('ABd1238FRS', 'OWNSALCR04', 'M-B', 'Black','G55','2009/01/09','All-Wheel Drive',3);
+
+
+
+INSERT INTO Oferta(Samochod_VIN_number, Katalog_ID_katalogu, Cena)
+            VALUES ('ABd1232FRS', 'KATSERIN01', 12500);
+INSERT INTO Oferta(Samochod_VIN_number, Katalog_ID_katalogu, Cena)
+            VALUES ('ABd1233FRS', 'KATSERIN01', 143300);
+INSERT INTO Oferta(Samochod_VIN_number, Katalog_ID_katalogu, Cena)
+            VALUES ('ABd1234FRS', 'KATSERIN02', 24800);
+INSERT INTO Oferta(Samochod_VIN_number, Katalog_ID_katalogu, Cena)
+            VALUES ('ABd1235FRS', 'KATSERIN02', 5400);
+INSERT INTO Oferta(Samochod_VIN_number, Katalog_ID_katalogu, Cena)
+            VALUES ('ABd1236FRS', 'KATSERIN06', 87900);
+INSERT INTO Oferta(Samochod_VIN_number, Katalog_ID_katalogu, Cena)
+            VALUES ('ABd1237FRS', 'KATSERIN06', 9900);
+INSERT INTO Oferta(Samochod_VIN_number, Katalog_ID_katalogu, Cena)
+            VALUES ('ABd1238FRS', 'KATSERIN12', 32400);
+
+
+INSERT INTO Gazeta (ID_wydanie, czas_wydania_gazeta, Dzialy_IDDzial)
+                VALUES ('GAZSERIN01','2011/11/10', 'AAAAAAAAAA');
+INSERT INTO Gazeta (ID_wydanie, czas_wydania_gazeta, Dzialy_IDDzial)
+                VALUES ('GAZSERIN02','2011/12/10', 'AAAAAAAAAA');
+INSERT INTO Gazeta (ID_wydanie, czas_wydania_gazeta, Dzialy_IDDzial)
+                VALUES ('GAZSERIN03','2012/01/10', 'AAAAAAAAAA');
+INSERT INTO Gazeta (ID_wydanie, czas_wydania_gazeta, Dzialy_IDDzial)
+                VALUES ('GAZSERIN04','2012/02/10', 'AAAAAAAAAA');
+INSERT INTO Gazeta (ID_wydanie, czas_wydania_gazeta, Dzialy_IDDzial)
+                VALUES ('GAZSERIN05','2012/04/10', 'AAAAAAAAAA');
+INSERT INTO Gazeta (ID_wydanie, czas_wydania_gazeta, Dzialy_IDDzial)
+                VALUES ('GAZSERIN06','2012/06/10', 'AAAAAAAAAA');
+INSERT INTO Gazeta (ID_wydanie, czas_wydania_gazeta, Dzialy_IDDzial)
+                VALUES ('GAZSERIN07','2012/08/10', 'AAAAAAAAAA');
+INSERT INTO Gazeta (ID_wydanie, czas_wydania_gazeta, Dzialy_IDDzial)
+                VALUES ('GAZSERIN08','2012/10/10', 'AAAAAAAAAA');
+INSERT INTO Gazeta (ID_wydanie, czas_wydania_gazeta, Dzialy_IDDzial)
+                VALUES ('GAZSERIN09','2012/12/10', 'AAAAAAAAAA');
+INSERT INTO Gazeta (ID_wydanie, czas_wydania_gazeta, Dzialy_IDDzial)
+                VALUES ('GAZSERIN10','2013/02/10', 'AAAAAAAAAA');
+INSERT INTO Gazeta (ID_wydanie, czas_wydania_gazeta, Dzialy_IDDzial)
+                VALUES ('GAZSERIN11','2013/04/10', 'AAAAAAAAAA');
+INSERT INTO Gazeta (ID_wydanie, czas_wydania_gazeta, Dzialy_IDDzial)
+                VALUES ('GAZSERIN12','2013/06/10', 'AAAAAAAAAA');
+
+
+
+INSERT INTO Artykul (IDArt, Autor_Naz, Gazeta_ID_wydanie) VALUES ('ARTYKNUM01', 'BLOP','GAZSERIN01');
+INSERT INTO Artykul (IDArt, Autor_Naz, Gazeta_ID_wydanie) VALUES ('ARTYKNUM02', 'SIZLACK','GAZSERIN01');
+INSERT INTO Artykul (IDArt, Autor_Naz, Gazeta_ID_wydanie) VALUES ('ARTYKNUM03', 'JOESTAR','GAZSERIN01');
+INSERT INTO Artykul (IDArt, Autor_Naz, Gazeta_ID_wydanie) VALUES ('ARTYKNUM04', 'BLOP','GAZSERIN02');
+INSERT INTO Artykul (IDArt, Autor_Naz, Gazeta_ID_wydanie) VALUES ('ARTYKNUM05', 'SIZLACK','GAZSERIN02');
+INSERT INTO Artykul (IDArt, Autor_Naz, Gazeta_ID_wydanie) VALUES ('ARTYKNUM06', 'JOESTAR','GAZSERIN03');
+INSERT INTO Artykul (IDArt, Autor_Naz, Gazeta_ID_wydanie) VALUES ('ARTYKNUM07', 'BLOP','GAZSERIN03');
+INSERT INTO Artykul (IDArt, Autor_Naz, Gazeta_ID_wydanie) VALUES ('ARTYKNUM08', 'SIZLACK','GAZSERIN03');
+INSERT INTO Artykul (IDArt, Autor_Naz, Gazeta_ID_wydanie) VALUES ('ARTYKNUM09', 'JOESTAR','GAZSERIN04');
+INSERT INTO Artykul (IDArt, Autor_Naz, Gazeta_ID_wydanie) VALUES ('ARTYKNUM10', 'SIZLACK','GAZSERIN05');
+INSERT INTO Artykul (IDArt, Autor_Naz, Gazeta_ID_wydanie) VALUES ('ARTYKNUM11', 'BLOP','GAZSERIN06');
+INSERT INTO Artykul (IDArt, Autor_Naz, Gazeta_ID_wydanie) VALUES ('ARTYKNUM12', 'JOESTAR','GAZSERIN07');

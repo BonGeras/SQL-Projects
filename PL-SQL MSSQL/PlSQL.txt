@@ -1,0 +1,50 @@
+--1 trigger
+
+CREATE OR REPLACE TRIGGER CantFireEmployee
+BEFORE DELETE ON PRACOWNIKI
+BEGIN
+raise_application_error(-20325,'You cant delete employees');
+END;
+/
+--2 trigger
+
+CREATE OR REPLACE TRIGGER DontFireEmployee
+BEFORE DELETE
+ON PRACOWNIKI
+FOR EACH ROW
+DECLARE
+p_IloscArt INT:=0;
+p_Nazwisko varchar2(10);
+BEGIN
+  SELECT COUNT(1) INTO p_IloscArt FROM ARTYKUL
+  WHERE AUTOR_NAZ=OLD.NAZWISKO;
+  IF p_IloscArt>2 THEN
+     dbms_output.put_line(Nazwisko||' cant be fired');
+  END IF;
+END;
+
+--1 procedure
+
+CREATE PROCEDURE NewYearSalaryDewInflation
+IS
+BEGIN
+ UPDATE PRACOWNIKI
+ SET SALARY=SALARY+(SALARY*0.1)
+ WHERE dzialy_iddzial LIKE 'A%';
+ dbms_output.put_line('SAY HELLO TO YOUR NEW SALARY');
+END;
+
+--2 procedure with cursor
+
+CREATE OR REPLACE PROCEDURE NewModel
+AS
+    CURSOR DataAboutCars
+IS
+SELECT VIN_NUMBER, BRAND, MODEL
+FROM SAMOCHOD;
+BEGIN
+    FOR car IN DataAboutCars
+    LOOP
+    dbms_output.put_line('Brand '||car.BRAND||', Model '||car.MODEL||', With VIN - '||car.VIN_NUMBER);
+    end loop;
+END;

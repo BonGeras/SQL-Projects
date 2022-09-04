@@ -1,0 +1,51 @@
+--1 trigger
+GO
+CREATE TRIGGER CantFireEmployee
+    ON Pracowniki
+    FOR DELETE
+    AS
+    ROLLBACK;
+
+--2 trigger
+    GO
+CREATE TRIGGER DontFireEmployee
+    ON Pracowniki
+    FOR DELETE
+    AS BEGIN
+        DECLARE
+        @Nazwisko varchar(10);
+        SELECT @Nazwisko=Nazwisko FROM Pracowniki;
+        IF EXISTS(SELECT 1 FROM Artykul WHERE Autor_Naz=@Nazwisko) AND (select count(*)FROM Artykul WHERE Autor_Naz=@Nazwisko)>2
+        ROLLBACK;
+        PRINT (@Nazwisko+' cant be fired')
+end;
+
+--1 procedure
+    GO
+CREATE PROCEDURE  DataAboutEmployees @IdDzial varchar(10)
+AS
+BEGIN
+    SELECT Imie,Nazwisko,Sex,Salary,Stanowisko
+    FROM Pracowniki
+    WHERE Dzialy_IDDzial=@IdDzial;
+end;
+
+--2 procedure with cursor
+--2 procedure with cursor
+CREATE PROCEDURE NewModel @Model VARCHAR(30)
+AS
+    DECLARE NewNum CURSOR FOR SELECT Model,VIN_number FROM Samochod;
+    DECLARE @NewVin VARCHAR(10);
+    DECLARE @NewModel VARCHAR(30);
+    BEGIN
+        OPEN NewNum
+        FETCH NEXT FROM NewNum INTO @NewModel,@NewVin;
+        WHILE @@FETCH_STATUS=0
+        BEGIN
+            IF @NewModel = @Model
+                UPDATE Samochod SET Model=@Model WHERE VIN_number=@NewVin; 
+            FETCH NEXT FROM NewNum INTO @NewModel,@NewVin;
+        end;
+        CLOSE NewNum;
+        DEALLOCATE NewNum;
+    end
